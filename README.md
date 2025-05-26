@@ -26,7 +26,7 @@ All infrastructure is managed using GitOps practices. This repo holds the source
 - **K3s**: Lightweight Kubernetes distribution for the cluster
 - **Terraform**: Used to automate setup of NUCs and networking
 - **NFS**: For distributed storage (pending final implementation)
-- **AI Assist**: See [.chatgpt/prompt.md](.chatgpt/prompt.md) for the context used by ChatGPT to assist with this repo.
+- **AI Assist**: See [.context/prompt.md](.context/prompt.md) for the context used by ChatGPT to assist with this repo.
 
 ## Directory Structure
 
