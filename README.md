@@ -26,18 +26,16 @@ All infrastructure is managed using GitOps practices. This repo holds the source
 - **K3s**: Lightweight Kubernetes distribution for the cluster
 - **Terraform**: Used to automate setup of NUCs and networking
 - **NFS**: For distributed storage (pending final implementation)
+- **AI Assist**: See [.chatgpt/prompt.md](.chatgpt/prompt.md) for the context used by ChatGPT to assist with this repo.
 
 ## Directory Structure
 
 ```
 .
-├── cluster/                # ArgoCD app definitions and manifests
+├── .context/               # GPT Prompts and .env files for local development
 ├── terraform/              # Terraform configuration for infra setup
-├── scripts/                # Setup and bootstrap scripts
-├── docs/                   # Documentation and notes
 └── README.md               # This file
 ```
 
 ---
-
 Made with ❤️ for homelab learning and fun.
