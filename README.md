@@ -7,9 +7,15 @@ This repository contains the infrastructure-as-code (IaC) configuration for a ho
 ## Overview
 
 The lab consists of:
-- **Mac Mini (M1)**: Acts as the control plane and primary storage host.
-- **Intel NUCs (x3)**: Serve as worker nodes, each with Intel Celeron N4505, 4GB RAM, and 128GB SSD.
-- **8TB HDD**: Connected to the Mac Mini and shared across the cluster for media storage.
+- **Intel NUCs (x3)**:
+    - **nuc1**: 2 Cores, 32GB RAM, 512GB SSD
+    - **nuc2**: 2 Cores, 16GB RAM, 512GB SSD
+    - **nuc3**: 2 Cores, 8GB RAM, 256GB SSD
+- **Worker Node VM**:
+    - **nucx**: 4 core, 4-16GB RAM, 1TB SSD
+        - Virtualized Ubuntu install on my gaming rig with dynamic RAM allocation
+        - Intended for heavy-cpu workloads that would overpower the Celeron processors in the NUCs.
+        - Will also act as storage controller, with up to 4 1TB SSDs for backing storage.
 
 All infrastructure is managed using GitOps practices. This repo holds the source of truth — changes committed here are automatically applied to the cluster via ArgoCD.
 
