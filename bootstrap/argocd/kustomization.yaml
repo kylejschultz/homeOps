@@ -4,6 +4,8 @@ namespace: argocd
   #- node-taint.yaml
 resources:
 - namespace.yaml
+- node-taint.yaml
+- infra-app.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 labels:
 - includeSelectors: true
