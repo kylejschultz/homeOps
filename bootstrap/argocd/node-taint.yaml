@@ -1,0 +1,10 @@
+# bootstrap/argocd/node-taint.yaml
+apiVersion: v1
+kind: Node
+metadata:
+  name: nucx
+spec:
+  taints:
+    - key:   heavyOnly
+      value: "true"
+      effect: NoSchedule

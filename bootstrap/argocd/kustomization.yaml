@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: argocd
 resources:
   - namespace.yaml
+  - node-taint.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 commonLabels:
   app.kubernetes.io/name: argocd
